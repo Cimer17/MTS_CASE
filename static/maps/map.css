@@ -1,0 +1,28 @@
+html,
+body,
+#map {
+    width: 60vh;
+    height: 70vh;
+    padding: 0;
+    margin: 0;
+}
+
+.card_open{
+    max-width: 450px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.but_route{
+    display: inline-block; /* Строчно-блочный элемент */
+    background: #f21919; 
+    color: #fff;
+    padding: 1rem 1.5rem; /* Поля вокруг текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    border-radius: 3px; /* Скругляем уголки */
+}
+
+.points{
+    text-align: left;
+}
