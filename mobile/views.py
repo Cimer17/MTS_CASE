@@ -25,9 +25,8 @@ def get_data():
             }
         }
         data["features"].append(feature)
-    with open('static/data.json', 'w') as json_file:
+    with open('static/data.json', 'w', encoding='UTF-8') as json_file:
         json.dump(data, json_file, ensure_ascii=False, indent=4)
-
 
 
 def index(request):
