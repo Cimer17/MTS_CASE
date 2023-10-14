@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'vtbGlav.css' %}"> 
+    </head>
+    <body>
+        <header class="vtb_header">
+            <div class="container-header">
+                <div class="logo_vtb">
+                    <img class="logo" src="{% static 'imageMts/MTS_Logo_CMYK1.png' %}">
+                </div>
+                <div class="aftoriz">
+                    <div class="person">
+                        <div class="avatar">
+                            <img class="logo" src="{% static 'image/icons.png' %}">
+                        </div>
+                        <div class="contact">
+                            <div class="fio">
+                                <p class="text_fio"> Роман Кабан </p> 
+                            </div>
+                            <div class="pochta">
+                                <a class="links" 
+                                href="mailto:romankov@gmail.com" 
+                                itemprop="email">romankov@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tema_t_s">
+                        <label id="switch" class="switch">
+                            <input type="checkbox" onchange="toggleTheme()" id="slider">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="mainpo">
+            <div class="left_bar">
+                <div class="left_bar_top">
+                    <nav>
+                        <li class="multi_txt">
+                            <div class="logo_spec"></div>
+                            <p>Главная</p>
+                        </li>
+                        <li class="multi_txt">
+                            <div class="logo_spec custom4"></div>
+                            <p>Мой Офис</p>
+                        </li>
+                        <li class="multi_txt">
+                            <div class="logo_spec custom1"></div>
+                            <p>Профиль</p>
+                        </li>
+                        <li class="multi_txt">
+                            <div class="logo_spec custom2"></div>
+                            <p>Карты</p>
+                        </li>
+                        <li class="multi_txt">
+                            <div class="logo_spec custom3"></div>
+                            <p>Чат</p>
+                        </li>
+                    </nav>
+                </div>
+                <div class="left_bar_bottom">
+                    <nav>
+                        <li class="multi_txt">
+                            <img class="logo_exit" src="{% static 'image/exit.png' %}">
+                            <p>Выйти</p>
+                        </li>
+                    </nav>
+                </div>
+            </div>
+            <div class="p_ozaglav">
+                <p style="font-family:'Franklin Gothic Medium', 
+                'Arial Narrow', Arial, sans-serif ; font-size: 24px;"> 
+                Главная </p>
+            </div>
+            <div class="mobile_vers">
+                <div class="mobile">
+                    {% block content %} {% endblock %}
+                </div>
+            </div>
+        </main>
+        <footer class="footer_mobile">
+            <div class="podval_mob">
+                <nav class="menu_mobile">
+                    <li class="multi_txt">
+                        <div class="logo_spec"></div>
+                        <p class="zaglav">Главная</p>
+                    </li>
+                    <li class="multi_txt">
+                        <div class="logo_spec custom4"></div>
+                        <p class="zaglav">Мой Офис</p>
+                    </li>
+                    <li class="multi_txt">
+                        <div class="logo_spec custom1"></div>
+                        <p class="zaglav">Профиль</p>
+                    </li>
+                    <li class="multi_txt">
+                        <div class="logo_spec custom2"></div>
+                        <p class="zaglav">Карты</p>
+                    </li>
+                    <li class="multi_txt">
+                        <div class="logo_spec custom3"></div>
+                        <p class="zaglav">Чат</p>
+                    </li>
+                </nav>
+            </div>
+        </footer>
+        <script src="{% static 'js/s.js' %}"></script>
+    </body>
+</html>

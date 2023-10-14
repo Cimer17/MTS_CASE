@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="ru">
+{% extends 'mobile/temple.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Карта</title>
-</head>
-
-<body>
-    {% include 'mobile/module/maps/module_map.html' %}
-</body>
-
-</html>
+{% block content %}
+{% include 'mobile/module/maps/module_map.html' %}
+{% endblock %}

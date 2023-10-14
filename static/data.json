@@ -2,37 +2,54 @@
     "type": "FeatureCollection",
     "features": [
         {
-            "type": "Feature", 
-            "id": 0, 
-            "geometry": {"type": "Point", "coordinates": [56.358877, 41.312214]}, 
+            "type": "Feature",
+            "id": 8,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    56.358877,
+                    41.312214
+                ]
+            },
             "properties": {
-                "balloonContentHeader": "<font size=3><b>MTS SMART OFFICE</b></font><font size=2><p><b>Владимирская область, г. Ковров, пр-т Ленина, д. 42</b><p>", 
-                "balloonContentBody": "<a href='https://yandex.ru/maps/?rtext=~56.358592, 41.312235' class='but_route'>Построить маршрут в Яндекс.Карты</a>", 
-                "balloonContentFooter": "<font size=1>Справки в боте телеграм @test </font>", 
-                "iconImageHref": "static/maps/metka.png" 
+                "balloonContentHeader": "<font size=3><b>MTS SMART OFFICE</b></font><font size=2><p><b>Владимирская область, г. Ковров, пр-т Ленина, д. 42</b><p>",
+                "balloonContentBody": "<a href='https://yandex.ru/maps/?rtext=~56.358592, 41.312235' class='but_route'>Построить маршрут в Яндекс.Карты</a>",
+                "balloonContentFooter": "<font size=1>Справки в боте телеграм @test </font>",
+                "iconImageHref": "static/maps/metka.png"
             }
         },
         {
-            "type": "Feature", 
-            "id": 1, 
-            "geometry": {"type": "Point", "coordinates": [56.351023, 41.317009]}, 
+            "type": "Feature",
+            "id": 9,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    56.351023,
+                    41.317009
+                ]
+            },
             "properties": {
-                "balloonContentHeader": "<font size=3><b>MTS SMART OFFICE</b></font><font size=2><p><b>Владимирская область, г. Ковров, улица Тургенева, 9с1</b><p>", 
-                "balloonContentBody": "<a href='https://yandex.ru/maps/?rtext=~56.351023, 41.317009' class='but_route'>Построить маршрут в Яндекс.Карты</a>", 
-                "balloonContentFooter": "<font size=1>Справки в боте телеграм @test </font>", 
-                "iconImageHref": "static/maps/metka.png" 
+                "balloonContentHeader": "<font size=3><b>MTS SMART OFFICE</b></font><font size=2><p><b>Владимирская область, г. Ковров, улица Тургенева, 9с1</b><p>",
+                "balloonContentBody": "<a href='https://yandex.ru/maps/?rtext=~56.351023, 41.317009' class='but_route'>Построить маршрут в Яндекс.Карты</a>",
+                "balloonContentFooter": "<font size=1>Справки в боте телеграм @test </font>",
+                "iconImageHref": "static/maps/metka.png"
             }
-        }
-        ,
+        },
         {
-            "type": "Feature", 
-            "id": 2, 
-            "geometry": {"type": "Point", "coordinates": [56.356177, 41.302270]}, 
+            "type": "Feature",
+            "id": 10,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    56.356177,
+                    41.30227
+                ]
+            },
             "properties": {
-                "balloonContentHeader": "<font size=3><b>MTS SMART OFFICE</b></font><font size=2><p><b>Владимирская область, г. Ковров, улица Ногина, 20</b><p>", 
-                "balloonContentBody": "<a href='https://yandex.ru/maps/?rtext=~56.356177, 41.302270' class='but_route'>Построить маршрут в Яндекс.Карты</a>", 
-                "balloonContentFooter": "<font size=1>Справки в боте телеграм @test </font>", 
-                "iconImageHref": "static/maps/metka.png" 
+                "balloonContentHeader": "<font size=3><b>MTS SMART OFFICE</b></font><font size=2><p><b>Владимирская область, г. Ковров, улица Ногина, 20</b><p>",
+                "balloonContentBody": "<a href='https://yandex.ru/maps/?rtext=~56.356177, 41.302270' class='but_route'>Построить маршрут в Яндекс.Карты</a>",
+                "balloonContentFooter": "<font size=1>Справки в боте телеграм @test </font>",
+                "iconImageHref": "static/maps/metka.png"
             }
         }
     ]

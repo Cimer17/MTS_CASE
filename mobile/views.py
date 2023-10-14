@@ -12,6 +12,7 @@ def get_data():
     for office in offices:
         feature = {
             "type": "Feature",
+            "id": office.id,  # Включаем поле id
             "geometry": {
                 "type": "Point",
                 "coordinates": office.coordinates
@@ -24,8 +25,9 @@ def get_data():
             }
         }
         data["features"].append(feature)
-    with open('data_test.json', 'w') as json_file:
+    with open('static/data.json', 'w') as json_file:
         json.dump(data, json_file, ensure_ascii=False, indent=4)
+
 
 
 def index(request):
