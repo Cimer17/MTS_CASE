@@ -1,0 +1,435 @@
+.theme-light {
+--color-primary: #0060df;
+--color-secondary: #D9D9D9;
+--color-accent: #E40523;
+--font-color: #000000;
+--color-bar:#FFFFFF;
+--glav-icon: url("imageMts/ser/home.svg");
+--home-icon-red: url("imageMts/red/homered.svg");
+
+--prof-icon: url("imageMts/ser/prof.svg");
+--prof-icon-red: url("imageMts/red/profil_light.svg");
+
+--maps-icon: url("imageMts/ser/maps.svg");
+--maps-icon-red: url("imageMts/red/mapsred.svg");
+
+--chat-icon: url("imageMts/ser/chat.svg");
+--chat-icon-red: url("imageMts/red/chatred.svg");
+
+--my-office: url("imageMts/my_office.svg");
+--my-office-red: url("imageMts/red/my_office_red.svg");
+}
+
+.theme-dark {
+--color-primary: #17ed90;
+--color-secondary: #1A1E23;
+--color-accent: #FFFFFF;
+--font-color: #FFFFFF;
+--color-bar: #2B313B;
+--glav-icon: url("imageMts/ser/home.svg");
+--home-icon-red: url("imageMts/white/whiteHome.svg");
+
+--prof-icon: url("imageMts/ser/prof.svg");
+--prof-icon-red: url("imageMts/white/whiteProf.svg");
+
+--maps-icon: url("imageMts/ser/maps.svg");
+--maps-icon-red: url("imageMts/white/whiteMaps.svg");
+
+--chat-icon: url("imageMts/ser/chat.svg");
+--chat-icon-red: url("imageMts/white/whiteChat.svg");
+
+--my-office: url("imageMts/my_office.svg");
+--my-office-red: url("imageMts/white/my_office_white.svg");
+}
+
+.container h1 {
+color: var(--font-color);
+font-family: sans-serif;
+}
+
+.container button {
+color: var(--font-color);
+background: var(--color-primary);
+padding: 10px 20px;
+border: 0;
+border-radius: 5px;
+}
+
+body{
+    background: var(--color-secondary);
+}
+
+.mainpo{
+    display: flex;
+}
+
+.vtb_header {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    max-height: 10vh;
+    height: 100%;
+}
+
+.container-header{
+    display: flex;
+    border-radius: 8px;
+    background: var(--color-bar);
+}
+
+.left_bar{
+    display: flex;
+    flex-direction: column;
+    height: 87vh;
+    width: 10vw;
+    border-radius: 8px;
+    background: var(--color-bar);
+}
+
+.logo_vtb{
+    margin: auto 1vw;
+    display: flex;
+    align-items: center;
+    width: 135px;
+    height: 45px;
+}
+
+.logo{
+    max-width: 100%;
+    height: auto;
+}
+
+.logo_exit{
+    max-width: 100%;
+    max-height: 100%;
+    width: 27px;
+    height: 27px;
+    margin: auto 0.5vw;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo_spec{
+    max-width: 100%;
+    max-height: 100%;
+    width: 27px;
+    height: 27px;
+    margin: auto 0.5vw;
+    background: var(--glav-icon);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo_spec.custom1{
+    background: var(--prof-icon);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo_spec.custom2{
+    background: var(--maps-icon);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.logo_spec.custom3{
+    background: var(--chat-icon);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.logo_spec.custom4{
+    background: var(--my-office);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.aftoriz{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.tema_t_s{
+    margin: auto 1vw;
+    display: flex;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.person{
+    margin: 0 1vw;
+    display: flex;
+    justify-content: right;
+    width: 250px;
+    height: auto;
+}
+
+.avatar{
+    margin: auto;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #D9D9D9;
+}
+
+.contact{
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 70px;
+}
+
+.fio{
+    margin: auto 0;
+    display: flex;
+    height: 40px;
+}
+
+.text_fio{
+    color: var(--font-color);
+    font-size: 18px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+.pochta{
+    margin: auto 0;
+    display: flex;
+    height: 40px;
+}
+
+.links{
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 18px;
+    font-family:'Arial Narrow', sans-serif ;
+    cursor: pointer;
+}
+
+.left_bar_top{
+    margin: 4vh 1vw;
+    display: flex;
+    height: 100%;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.4);
+}
+
+.left_bar_bottom{
+    display: flex;
+    margin: 0 1vw;
+    height: 15%;
+}
+
+.multi_txt{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin: 1vh 0;
+    text-decoration: none;
+    color: #7D7D7D;
+    font-size: 18px;
+    font-family:'Iner', sans-serif ;
+    cursor: pointer;
+    list-style: none;
+}
+
+.multi_txt p:hover{
+    color: var(--color-accent);
+}
+
+.multi_txt:nth-of-type(1):hover .logo_spec{
+    background: var(--home-icon-red);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.multi_txt:nth-of-type(2):hover .logo_spec{
+    background: var(--my-office-red);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.multi_txt:nth-of-type(3):hover .logo_spec{
+    background: var(--prof-icon-red);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.multi_txt:nth-of-type(4):hover .logo_spec{
+    background: var(--maps-icon-red);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.multi_txt:nth-of-type(5):hover .logo_spec{
+    background: var(--chat-icon-red);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+/* The switch - the box around the slider */
+.switch {
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+/* The slider */
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+-webkit-transition: 0.4s;
+transition: 0.4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 40px;
+width: 40px;
+left: 0px;
+bottom: 4px;
+top: 0;
+bottom: 0;
+margin: auto 0;
+-webkit-transition: 0.4s;
+transition: 0.4s;
+box-shadow: 0 0px 15px #2020203d;
+background: white url('https://i.ibb.co/FxzBYR9/night.png');
+background-repeat: no-repeat;
+background-position: center;
+}
+
+input:checked + .slider {
+background-color: #2196f3;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(24px);
+-ms-transform: translateX(24px);
+transform: translateX(24px);
+background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
+background-repeat: no-repeat;
+background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+
+.p_ozaglav{
+    margin:0 2vw; 
+    color: var(--font-color);
+}
+
+@media screen and (max-width:10000px){
+    .podval_mob{
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+    body{
+        background: var(--color-bar);
+        margin: 0;
+    }
+    .logo_vtb{
+        display: none;
+    }
+
+    .logo_spec{
+        width: 76px;
+        height: 35px;
+    }
+    
+    .left_bar{
+        display: none;
+    }
+
+    .tema_t_s{
+        margin: auto 4vw;
+        width: 50%;
+        justify-content: flex-end;
+    }
+
+    .p_ozaglav{
+        display: none;
+    }
+
+    .mobile_vers{
+        max-width: 100vw;
+        width: 100%;
+        max-height: 80vh;
+        height: 100%;
+    }
+
+    .mobile{
+        height: 80vh;
+        background: #FFFFFF;
+    }
+
+    .footer_mobile{
+        max-width: 100vw;
+        max-height: 10vh;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .podval_mob{
+        display: flex;
+        height: 8vh;
+        background: var(--color-bar);
+    }
+
+    .mobile{
+        border-bottom: 2px solid rgba(125, 125, 125, 0.4);
+    }
+
+    .menu_mobile{
+        display: flex;
+        justify-content: center;
+    }
+
+    .zaglav{
+        margin: 0 auto;
+    }
+
+    .multi_txt{
+        height: 60px;
+        flex-direction: column;
+        font-size: 16px;
+    }
+}
