@@ -8,7 +8,7 @@
     }
 
     .columns {
-        margin-top: 10px;
+        margin: 10px 0;
         display: flex;
         justify-content: center;
     }
@@ -31,6 +31,35 @@
         <div class="dls">
             <img src="{% static 'office/dops.png' %}">
         </div>
+        <div class="light">
+            <p>Освещение</p>
+            <div class="tools_light">
+                <label id="switch_red" class="switch_red">
+                    <input type="checkbox" id="slider_red">
+                    <span class="slider_red round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tools_komfort">
+    <div class="klimat">
+        <div>
+            <div class="image_contol">
+                <img class="img_contol" src="{% static 'imageMts/градусник.svg' %}">
+            </div>
+            <p style="margin: 0;">Климат</p>
+        </div>
+        <label id="switch_red" class="switch_red">
+            <input type="checkbox" id="slider_red">
+            <span class="slider_red round"></span>
+        </label>
+    </div>
+    <div class="klimat_contol">
+        <label id="switch_yellow" class="switch_yellow">
+            <input type="checkbox" id="slider_yellow">
+            <span class="slider_yellow round"></span>
+        </label>
     </div>
 </div>
 {% endblock %}
