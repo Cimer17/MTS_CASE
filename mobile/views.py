@@ -1,6 +1,9 @@
 from django.shortcuts import render
+from django.http import JsonResponse
 from .models import *
+import requests
 import json
+from django.views.decorators.csrf import csrf_exempt
 
 
 def get_data():
@@ -48,3 +51,34 @@ def profile(request):
 
 def chat(request):
     return render(request, 'mobile/chat.html')
+
+
+token = 'y0_AgAAAAAfsIQlAAqWqQAAAADuJBIHD18WPQVEQ6ukgX7hUslf9fRkgVs'
+device_ids = ['045ab865-070d-4a99-994f-78cb17de2abd',
+              'e4fd0567-d1d7-4064-9597-df391234cbac']
+
+
+def TurnOnOffLamp(token, device_id, turn):
+    url = r'https://api.iot.yandex.net/v1.0/devices/actions'
+    headers = {'Authorization': 'Bearer' + ' ' + token}
+    data = {'devices': [{'id': device_id, 'actions': [{'type': 'devices.capabilities.on_off', 'state': {
+        'instance': 'on', 'value': turn}} for device_id in device_ids]}]}
+    return requests.post(url=url, headers=headers, data=json.dumps(data)).content
+
+
+def lamp(turn):
+    for device_id in device_ids:
+        TurnOnOffLamp(token, device_id, turn)
+
+
+@csrf_exempt
+def toggle_lamp(request):
+    data = json.loads(request.body)
+    isChecked = data.get("isChecked")
+    if isChecked:
+        lamp(True)
+        message = "Лампочка включена"
+    else:
+        lamp(False)
+        message = "Лампочка выключена"
+    return JsonResponse({"message": message})
