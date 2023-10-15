@@ -42,13 +42,17 @@
             </div>
         </div>
         <script>
+            var csrfToken = "{{ csrf_token }}";
+        </script>
+        <script>
+            document.getElementById("slider_red").addEventListener("change", toggleLamp);
             function toggleLamp() {
                 var isChecked = document.getElementById("slider_red").checked;
                 fetch("/toggle_lamp", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
-                        "X-CSRFToken": csrfToken, // Вставьте CSRF-токен Django
+                        "X-CSRFToken": csrfToken,
                     },
                     body: JSON.stringify({ isChecked: isChecked }),
                 })

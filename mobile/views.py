@@ -73,12 +73,14 @@ def lamp(turn):
 
 @csrf_exempt
 def toggle_lamp(request):
-    data = json.loads(request.body)
-    isChecked = data.get("isChecked")
-    if isChecked:
-        lamp(True)
-        message = "Лампочка включена"
-    else:
-        lamp(False)
-        message = "Лампочка выключена"
-    return JsonResponse({"message": message})
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        isChecked = data.get("isChecked")
+        if isChecked:
+            lamp(False)
+            message = "Лампочка включена"
+        else:
+            lamp(True)
+            message = "Лампочка выключена"
+        return JsonResponse({"message": message})
+    return JsonResponse({"error": "Invalid request method"}, status=400)  # Вернуть JSON-ответ для GET-запроса
