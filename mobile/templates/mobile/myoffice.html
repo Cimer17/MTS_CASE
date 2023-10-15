@@ -35,24 +35,23 @@
             <p>Освещение</p>
             <div class="tools_light">
                 <label id="switch_red" class="switch_red">
-                    {% csrf_token %}
-                    <input type="checkbox" id="slider_red">
-                    <span class="slider_red round"></span>
+                    <form method="post" id="lamp-toggle-form">
+                        {% csrf_token %}
+                        <input type="checkbox" id="slider_red" onchange="toggleLamp()">
+                        <span class="slider_red round"></span>
+                    </form>
                 </label>
             </div>
         </div>
         <script>
-            var csrfToken = "{{ csrf_token }}";
-        </script>
-        <script>
-            document.getElementById("slider_red").addEventListener("change", toggleLamp);
             function toggleLamp() {
-                var isChecked = document.getElementById("slider_red").checked;
-                fetch("/toggle_lamp", {
+                var form = document.getElementById("lamp-toggle-form");
+                var isChecked = form.querySelector("#slider_red").checked;
+                fetch("/toggle_lamp/", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
-                        "X-CSRFToken": csrfToken,
+                        "X-CSRFToken": "{{ csrf_token }}",
                     },
                     body: JSON.stringify({ isChecked: isChecked }),
                 })
