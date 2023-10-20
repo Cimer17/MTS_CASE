@@ -52,9 +52,9 @@ def chat(request):
     return render(request, 'mobile/chat.html')
 
 
-token = 'y0_AgAAAAAfsIQlAAqWqQAAAADuJBIHD18WPQVEQ6ukgX7hUslf9fRkgVs'
-device_ids = ['045ab865-070d-4a99-994f-78cb17de2abd',
-              'e4fd0567-d1d7-4064-9597-df391234cbac']
+token = ''
+device_ids = ['',
+              '']
 
 
 def TurnOnOffLamp(token: str, device_id: str, turn: bool):
