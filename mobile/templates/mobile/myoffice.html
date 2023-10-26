@@ -1,47 +1,39 @@
 {% extends 'mobile/temple.html' %}
 
 {% block content %}
-<style>
-    .baner {
-        text-align: center;
-        padding-top: 10px;
-    }
-
-    .columns {
-        margin: 10px 0;
-        display: flex;
-        justify-content: center;
-    }
-</style>
+<head><title>Мой офис</title></head>
 {% load static %}
 
 <div class="baner">
     <img src="{% static 'office/big_baner.png' %}">
 </div>
-<div class="columns">
-    <div class="right_col">
-        <div class="eat">
-            <img src="{% static 'office/eat.png' %}">
+<section>
+    <div class="columns">
+        <div class="right_col">
+            <div class="light">
+                <img src="{% static 'imageMts/free_icon_takeaway.svg' %}">
+                <p>Еда в офис</p>
+            </div>
+            <div class="bot">
+                <a href='https://t.me/mtsbot_hackton_bot'><img src="{% static 'office/bot.png' %}"></a>
+            </div>
         </div>
-        <div class="bot">
-            <a href='https://t.me/mtsbot_hackton_bot'><img src="{% static 'office/bot.png' %}"></a>
-        </div>
-    </div>
-    <div class="left_col">
-        <div class="dls">
-            <img src="{% static 'office/dops.png' %}">
-        </div>
-        <div class="light">
-            <p>Освещение</p>
-            <div class="tools_light">
-                <label id="switch_red" class="switch_red">
-                    <input type="checkbox" id="slider_red">
-                    <span class="slider_red round"></span>
-                </label>
+        <div class="left_col">
+            <div class="dls">
+                <img src="{% static 'office/dops.png' %}">
+            </div>
+            <div class="light">
+                <p>Освещение</p>
+                <div class="tools_light">
+                    <label id="switch_red" class="switch_red">
+                        <input type="checkbox" id="slider_red">
+                        <span class="slider_red round"></span>
+                    </label>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 <div class="tools_komfort">
     <div class="klimat">
         <div>

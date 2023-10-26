@@ -39,75 +39,89 @@
             </div>
         </header>
         <main class="mainpo">
-            <div class="left_bar">
-                <div class="left_bar_top">
-                    <nav>
-                        <li class="multi_txt">
-                            <div class="logo_spec"></div>
-                            <p>Главная</p>
-                        </li>
-                        <li class="multi_txt">
-                            <div class="logo_spec custom4"></div>
-                            <p>Мой Офис</p>
-                        </li>
-                        <li class="multi_txt">
-                            <div class="logo_spec custom1"></div>
-                            <p>Профиль</p>
-                        </li>
-                        <li class="multi_txt">
-                            <div class="logo_spec custom2"></div>
-                            <p>Карты</p>
-                        </li>
-                        <li class="multi_txt">
-                            <div class="logo_spec custom3"></div>
-                            <p>Чат</p>
-                        </li>
-                    </nav>
+            <section>
+                <div class="left_bar">
+                    <div class="left_bar_top">
+                        <nav>
+                            <li class="multi_txt">
+                                <div class="logo_spec"></div>
+                                <p>Главная</p>
+                            </li>
+                            <li class="multi_txt">
+                                <div class="logo_spec custom4"></div>
+                                <p>Мой Офис</p>
+                            </li>
+                            <li class="multi_txt">
+                                <div class="logo_spec custom1"></div>
+                                <p>Профиль</p>
+                            </li>
+                            <li class="multi_txt">
+                                <div class="logo_spec custom2"></div>
+                                <p>Карты</p>
+                            </li>
+                            <li class="multi_txt">
+                                <div class="logo_spec custom3"></div>
+                                <p>Чат</p>
+                            </li>
+                        </nav>
+                    </div>
+                    <div class="left_bar_bottom">
+                        <nav>
+                            <li class="multi_txt">
+                                <img class="logo_exit" src="{% static 'image/exit.png' %}">
+                                <p>Выйти</p>
+                            </li>
+                        </nav>
+                    </div>
                 </div>
-                <div class="left_bar_bottom">
-                    <nav>
-                        <li class="multi_txt">
-                            <img class="logo_exit" src="{% static 'image/exit.png' %}">
-                            <p>Выйти</p>
-                        </li>
-                    </nav>
-                </div>
-            </div>
+            </section>
             <div class="p_ozaglav">
                 <p style="font-family:'Franklin Gothic Medium', 
                 'Arial Narrow', Arial, sans-serif ; font-size: 24px;"> 
                 Главная </p>
             </div>
-            <div class="mobile_vers">
-                <div class="mobile">
-                    {% block content %} 
-                    
-                    {% endblock %}
+            <section>
+                <div class="mobile_vers">
+                    <div class="mobile">
+                        {% block content %} 
+
+                        {% endblock %}
+                    </div>
                 </div>
-            </div>
+            </section>
         </main>
         <footer class="footer_mobile">
             <div class="podval_mob">
                 <nav class="menu_mobile">
                     <li class="multi_txt">
-                        <div class="logo_spec"></div>
-                        <p class="zaglav">Главная</p>
+                        <a class="zaglav" href="{{ settings.SITE_URL }}/index">
+                            <div class="logo_spec"></div>
+                            <p>Главная</p>
+                        </a>
                     </li>
                     <li class="multi_txt">
-                        <div class="logo_spec custom4"></div>
-                        <p class="zaglav">Мой Офис</p>
+                        <a class="zaglav" href="{{ settings.SITE_URL }}/myoffice">
+                            <div class="logo_spec custom4"></div>
+                            <p>Мой Офис</p> 
+                        </a>
                     </li>
                     <li class="multi_txt">
-                        <div class="logo_spec custom1"></div>
-                        <p class="zaglav">Профиль</p>
+                        <a class="zaglav" href="{{ settings.SITE_URL }}/profile/">
+                            <div class="logo_spec custom1"></div>
+                            <p>Профиль</p>
+                        </a>
                     </li>
                     <li class="multi_txt">
-                        <div class="logo_spec custom2"></div>
-                        <p class="zaglav">Карты</p>
+                        <a class="zaglav" href="{{ settings.SITE_URL }}/maps">
+                            <div class="logo_spec custom2"></div>
+                            <p>Карты</p>
+                        </a>
                     </li>
                     <li class="multi_txt">
-                        <div class="logo_spec custom3"></div>
-                        <p class="zaglav">Чат</p>
+                        <a class="zaglav" href="{{ settings.SITE_URL }}/chat">
+                            <div class="logo_spec custom3"></div>
+                            <p>Чат</p>
+                        </a>
                     </li>
                 </nav>
             </div>
