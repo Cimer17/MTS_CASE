@@ -18,20 +18,44 @@
                 <a href='https://t.me/mtsbot_hackton_bot'><img src="{% static 'office/bot.png' %}"></a>
             </div>
         </div>
-        <div class="left_col">
-            <div class="dls">
-                <img src="{% static 'office/dops.png' %}">
-            </div>
-            <div class="light">
-                <p>Освещение</p>
-                <div class="tools_light">
-                    <label id="switch_red" class="switch_red">
-                        <input type="checkbox" id="slider_red">
+        <div class="bot">
+            <a href='https://t.me/mtsbot_hackton_bot'><img src="{% static 'office/bot.png' %}"></a>
+        </div>
+    </div>
+    <div class="left_col">
+        <div class="dls">
+            <img src="{% static 'office/dops.png' %}">
+        </div>
+        <div class="light">
+            <p>Освещение</p>
+            <div class="tools_light">
+                <label id="switch_red" class="switch_red">
+                    <form method="post" id="lamp-toggle-form">
+                        {% csrf_token %}
+                        <input type="checkbox" id="slider_red" onchange="toggleLamp()">
                         <span class="slider_red round"></span>
-                    </label>
-                </div>
+                    </form>
+                </label>
             </div>
         </div>
+        <script>
+            function toggleLamp() {
+                var form = document.getElementById("lamp-toggle-form");
+                var isChecked = form.querySelector("#slider_red").checked;
+                fetch("/toggle_lamp/", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-CSRFToken": "{{ csrf_token }}",
+                    },
+                    body: JSON.stringify({ isChecked: isChecked }),
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data.message);
+                    });
+            }
+        </script>
     </div>
 </section>
 <div class="tools_komfort">
@@ -43,7 +67,7 @@
             <p style="margin: 0;">Климат</p>
         </div>
         <label id="switch_red" class="switch_red">
-            <input type="checkbox" id="slider_red">
+            <input type="checkbox" id="slider_red_tempa">
             <span class="slider_red round"></span>
         </label>
     </div>

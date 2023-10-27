@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from django.http import JsonResponse
 from .models import *
+import requests
 import json
 
 
@@ -48,3 +50,39 @@ def profile(request):
 
 def chat(request):
     return render(request, 'mobile/chat.html')
+
+
+token = ''
+device_ids = ['',
+              '']
+
+
+def TurnOnOffLamp(token: str, device_id: str, turn: bool):
+    url = r'https://api.iot.yandex.net/v1.0/devices/actions'
+    headers = {'Authorization': 'Bearer' + ' ' + token}
+    data = {'devices': [{'id': device_id, 'actions': [
+        {'type':  'devices.capabilities.on_off', 'state': {'instance':  'on', 'value': turn}}]}]}
+    return requests.post(url=url, headers=headers, data=json.dumps(data)).content
+
+
+def lamp(turn):
+    if turn:
+        for i in range(len(device_ids)):
+            TurnOnOffLamp(token, device_ids[i], True)
+    else:
+        for i in range(len(device_ids)):
+            TurnOnOffLamp(token, device_ids[i], False)
+
+
+def toggle_lamp(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        isChecked = data.get("isChecked")
+        if isChecked:
+            lamp(True)
+            message = "Лампочка включена"
+        else:
+            lamp(False)
+            message = "Лампочка выключена"
+        return JsonResponse({"message": message})
+    return JsonResponse({"error": "Invalid request method"}, status=400)
