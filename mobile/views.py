@@ -58,6 +58,7 @@ device_ids = ['045ab865-070d-4a99-994f-78cb17de2abd',
               'e4fd0567-d1d7-4064-9597-df391234cbac']
 
 
+
 def capabilitiesOnOff(token: str, device_id: str, turn: bool):
     url = r'https://api.iot.yandex.net/v1.0/devices/actions'
     headers = {'Authorization': 'Bearer' + ' ' + token}

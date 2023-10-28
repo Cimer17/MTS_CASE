@@ -35,6 +35,7 @@
                     </label>
                 </div>
             </div>
+<<<<<<< HEAD
         </div>
     </header>
     <main class="mainpo">
@@ -60,6 +61,93 @@
                     <li class="multi_txt">
                         <div class="logo_spec custom3"></div>
                         <p>Чат</p>
+=======
+        </header>
+        <main class="mainpo">
+            <section>
+                <div class="left_bar">
+                    <div class="left_bar_top">
+                        <nav>
+                            <li class="multi_txt">
+                                <div class="logo_spec"></div>
+                                <p>Главная</p>
+                            </li>
+                            <li class="multi_txt">
+                                <div class="logo_spec custom4"></div>
+                                <p>Мой Офис</p>
+                            </li>
+                            <li class="multi_txt">
+                                <div class="logo_spec custom1"></div>
+                                <p>Профиль</p>
+                            </li>
+                            <li class="multi_txt">
+                                <div class="logo_spec custom2"></div>
+                                <p>Карты</p>
+                            </li>
+                            <li class="multi_txt">
+                                <div class="logo_spec custom3"></div>
+                                <p>Чат</p>
+                            </li>
+                        </nav>
+                    </div>
+                    <div class="left_bar_bottom">
+                        <nav>
+                            <li class="multi_txt">
+                                <img class="logo_exit" src="{% static 'image/exit.png' %}">
+                                <p>Выйти</p>
+                            </li>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+            <div class="p_ozaglav">
+                <p style="font-family:'Franklin Gothic Medium', 
+                'Arial Narrow', Arial, sans-serif ; font-size: 24px;"> 
+                Главная </p>
+            </div>
+            <section>
+                <div class="mobile_vers">
+                    <div class="mobile">
+                        {% block content %} 
+
+                        {% endblock %}
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer_mobile">
+            <div class="podval_mob">
+                <nav class="menu_mobile">
+                    <li class="multi_txt">
+                        <a class="zaglav" href="{{ settings.SITE_URL }}/index">
+                            <div class="logo_spec"></div>
+                            <p>Главная</p>
+                        </a>
+                    </li>
+                    <li class="multi_txt">
+                        <a class="zaglav" href="{{ settings.SITE_URL }}/myoffice">
+                            <div class="logo_spec custom4"></div>
+                            <p>Мой Офис</p> 
+                        </a>
+                    </li>
+                    <li class="multi_txt">
+                        <a class="zaglav" href="{{ settings.SITE_URL }}/profile/">
+                            <div class="logo_spec custom1"></div>
+                            <p>Профиль</p>
+                        </a>
+                    </li>
+                    <li class="multi_txt">
+                        <a class="zaglav" href="{{ settings.SITE_URL }}/maps">
+                            <div class="logo_spec custom2"></div>
+                            <p>Карты</p>
+                        </a>
+                    </li>
+                    <li class="multi_txt">
+                        <a class="zaglav" href="{{ settings.SITE_URL }}/chat">
+                            <div class="logo_spec custom3"></div>
+                            <p>Чат</p>
+                        </a>
+>>>>>>> 4a1769b22bc29969369db60c1621c6327b30f251
                     </li>
                 </nav>
             </div>

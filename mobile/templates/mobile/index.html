@@ -1,5 +1,77 @@
 {% extends 'mobile/temple.html' %}
 
 {% block content %}
-
+<head><title>Главная</title></head>
+{% load static %}
+<div class="baner_glav">
+    <div class="trap">
+        <div class="trap_center">
+            <p>Сегодня</p>
+        </div>
+    </div>
+    <div class="weather">
+        <div class="met">
+            <img src="{% static 'imageMts/pogoda.svg' %}">
+        </div>
+        <div class="temperature">
+            <p class="degrees">20 &#176;C</p>
+            <p class="details_degrees">За окном дождь, 
+                лучший момент, чтобы <a href="#">забронировать</a> офис</p>
+        </div>
+    </div>
+</div>
+<section>
+    <div class="columns">
+        <div class="right_col">
+            <div class="light">
+                <div class="reservation">
+                    <b>Быстрое бронирование</b>
+                    <p>г.Ковров ул. Грибоедова 7/10</p>
+                </div>
+                <img src="{% static 'imageMts/flash.svg' %}">
+            </div>
+            <div class="office_maps">
+                <a href='https://t.me/mtsbot_hackton_bot'>
+                    <div class="maps_multi">
+                        <div>
+                            <img src="{% static 'imageMts/карты.svg' %}">
+                        </div>
+                        <div>
+                            <img src="{% static 'imageMts/выбор.svg' %}">
+                        </div>
+                    </div>
+                    <div class="office_maps_text">
+                        <b>Ближайший офис</b>
+                        <p>На карте</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="left_col">
+            <div class="dls">
+                <img src="{% static 'office/dops.png' %}">
+            </div>
+            <div class="light">
+                <b>История бронирования</b>
+                <img src="{% static 'imageMts/chek.svg' %}">
+            </div>
+        </div>
+    </div>
+</section>
+<div class="columns">
+    <div class="light">
+        <img src="{% static 'imageMts/rubl.svg' %}">
+        <b>Абонементы на посещение</b>
+    </div>
+    <div class="light special">
+        <img src="{% static 'imageMts/sim_kart.svg' %}">
+        <b>Корпоративные тарифы</b>
+    </div>
+</div>
+<div class="baner_glav special_baner">
+    <div class="text_city_baner">
+        <b>Посмотрите, <br /> Как мы помогаем вам экономить</b>
+    </div>
+</div>
+<p class="niz_text">Новости Вашего любимого офиса</p>
 {% endblock %}

@@ -1,14 +1,60 @@
-<!DOCTYPE html>
-<html lang="ru">
+{% extends 'mobile/temple.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Профиль</title>
-</head>
-
-<body>
-
-</body>
-
-</html>
+{% block content %}
+<head><title>Профиль</title></head>
+{% load static %}
+<div class="baner_glav_profile">
+    <div class="osnov_text_baner">
+        <div class="korona_text">
+            <img src="{% static 'imageMts/корона.svg' %}" alt="Корона">
+            <p>Premium office</p>
+        </div>
+        <p>Выгоднее на 30&#37;</p>
+    </div>
+    <div class="economy">
+        <button class="button_economy" role="button">Начать экономить</button>
+    </div>
+</div>
+<section>
+   <div class="parametrs_profile">
+        <div style="display: flex;">
+            <img class="icon_parametrs custom_icon2" src="{% static 'imageMts/chek.svg' %}" alt="Chek">
+            <p>История бронирования</p>
+        </div>
+        <img class="icon_parametrs custom_icon1" src="{% static 'imageMts/arrow_right.svg' %}" alt="Arrow">
+   </div>
+   <div class="parametrs_profile">
+        <div style="display: flex;">
+            <img class="icon_parametrs custom_icon2" src="{% static 'imageMts/grup.svg' %}" alt="">
+            <p>Пригласить друзей</p>
+        </div>
+        <img class="icon_parametrs custom_icon1" src="{% static 'imageMts/arrow_right.svg' %}" alt="Arrow">
+    </div>
+    <div class="parametrs_profile">
+        <div style="display: flex;">
+            <img class="icon_parametrs custom_icon2" src="{% static 'imageMts/icon-settings.svg' %}" alt="">
+            <p>Настройка приложения</p>
+        </div>
+        <img class="icon_parametrs custom_icon1" src="{% static 'imageMts/arrow_right.svg' %}" alt="Arrow">
+    </div>
+</section>
+<div class="columns">
+   <div class="other_blocks custom_bloks1">
+        <div style="display: flex;">
+            <img class="icon_parametrs custom_icon3" src="{% static 'imageMts/телега.svg' %}" alt="">
+            <p>Достижения</p>
+        </div>
+        <div style="display: flex;
+        justify-content: flex-end;">
+            <img src="{% static 'imageMts/cubok.svg' %}" alt="">
+        </div>
+   </div>
+   <div class="other_blocks custom_bloks2">
+        <div style="display: flex;
+        justify-content: flex-start;">
+            <img class="icon_parametrs custom_icon4" src="{% static 'imageMts/telegramm.svg' %}" alt="">
+        </div>
+        <p>Читайте нас</p>
+   </div>
+</div>
+{% endblock %}
