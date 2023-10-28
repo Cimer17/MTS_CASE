@@ -63,6 +63,24 @@
         </script>
     </div>
 </div>
+<script>
+    function toggle_humidifier() {
+        var form = document.getElementById("humidifier-toggle-form");
+        var isChecked = form.querySelector("#slider_red_tempa").checked;
+        fetch("/toggle_humidifier/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRFToken": "{{ csrf_token }}",
+            },
+            body: JSON.stringify({ isChecked: isChecked }),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.message);
+            });
+    }
+</script>
 <div class="tools_komfort">
     <div class="klimat">
         <div>
@@ -72,8 +90,11 @@
             <p style="margin: 0;">Климат</p>
         </div>
         <label id="switch_red" class="switch_red">
-            <input type="checkbox" id="slider_red_tempa">
-            <span class="slider_red round"></span>
+            <form method="post" id="humidifier-toggle-form">
+                {% csrf_token %}
+                <input type="checkbox" id="slider_red_tempa" onchange="toggle_humidifier()">
+                <span class="slider_red round"></span>
+            </form>
         </label>
     </div>
     <div class="klimat_contol">

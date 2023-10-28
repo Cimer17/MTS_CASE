@@ -569,6 +569,7 @@ border-radius: 50%;
 
     .zaglav{
         margin: 0 auto;
+        text-decoration-line : none;
     }
 
     .multi_txt{
