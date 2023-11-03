@@ -145,7 +145,7 @@ b{
 
 .details_degrees a{
     text-decoration: none;
-    color: var(--color-accent);
+    color: #FA060C;
 }
 
 .reservation{
@@ -475,8 +475,8 @@ b{
 }
 
 .logo{
-    max-width: 100%;
-    height: auto;
+    width: 60px;
+    height: 60px;
 }
 
 .logo_exit{
@@ -492,9 +492,9 @@ b{
 .logo_spec{
     max-width: 100%;
     max-height: 100%;
-    width: 27px;
-    height: 27px;
-    margin: 1vw 0.5vw;
+    width: 38px;
+    height: 32px;
+    /* margin: 1vw 0.5vw; */
     background: var(--glav-icon);
     background-repeat: no-repeat;
     background-position: center;
@@ -553,11 +553,13 @@ b{
 
 .avatar{
     margin: auto;
+    align-items: center;
+    justify-content: center;
     display: flex;
-    width: 60px;
-    height: 60px;
+    width: 64px;
+    height: 64px;
     border-radius: 30px;
-    background-color: #D9D9D9;
+    background-color: #FA060C;
 }
 
 .contact{
@@ -617,7 +619,6 @@ b{
     font-family:'Iner', sans-serif ;
     cursor: pointer;
     list-style: none;
-    flex-direction: column;
 }
 
 .multi_txt a{
@@ -626,7 +627,7 @@ b{
 }
 
 .multi_txt p{
-    margin: auto;
+    margin: auto 0.5vw;
 }
 
 .multi_txt:hover p{
@@ -880,18 +881,122 @@ border-radius: 50%;
     border-radius: 18%;
     }
 
+    
 .tools_light{
     margin: auto 2vw;
 }
 
 .p_ozaglav{
+    width: 100%;
     margin:0 2vw; 
     color: var(--font-color);
+}
+
+.display_center{
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 1vw;
 }
 
 @media screen and (max-width:10000px){
     .podval_mob{
         display: none;
+    }
+
+    .right_col, .left_col, 
+    .baner_glav, .mobile{
+        display: none;
+    }
+
+    .test_customs1{
+        width: 36vw;
+        height: 21vh;
+        text-align: center;
+        margin-top: 10px;
+        border-radius: 42px;
+        box-shadow: 1px 10px 10px -5px rgba(0, 0, 0, 0.4);
+        background-image: url("");
+        background-repeat: no-repeat;
+        background-size: 780px 245px;
+        background-position: center;
+    }
+
+    .test_customs2{
+        width: 36vw;
+        height: 21vh;
+        text-align: center;
+        margin-top: 10px;
+        border-radius: 42px;
+        box-shadow: 1px 10px 10px -5px rgba(0, 0, 0, 0.4);
+        background-image: url("");
+        background-repeat: no-repeat;
+        background-size: 780px 240px;
+        background-position: center;
+    }
+
+    .test_customs3{
+        width: 29vw;
+        height: 21vh;
+        text-align: center;
+        margin-top: 10px;
+        border-radius: 28px;
+        box-shadow: 1px 10px 10px -5px rgba(0, 0, 0, 0.4);
+        background-image: url("");
+        background-repeat: no-repeat;
+        background-size: 780px 210px;
+        background-position: center;
+    }
+
+    .box_mini_test_mini1{
+        width: 15vw;
+        height: 26vh;
+        text-align: center;
+        margin-top: 10px;
+        border-radius: 42px;
+        box-shadow: 1px 10px 10px -5px rgba(0, 0, 0, 0.4);
+        background-image: url("");
+        background-repeat: no-repeat;
+        background-size: 480px 270px;
+        background-position: center;
+    }
+
+    .box_mini_test_mini2{
+        width: 15vw;
+        height: 26vh;
+        text-align: center;
+        margin-top: 10px;
+        border-radius: 42px;
+        box-shadow: 1px 10px 10px -5px rgba(0, 0, 0, 0.4);
+        background-image: url("");
+        background-repeat: no-repeat;
+        background-size: 480px 270px;
+        background-position: center;
+    }
+
+    .verticals_verticals1{
+        width: 13vw;
+        height: 50vh;
+        text-align: center;
+        margin-top: 10px;
+        border-radius: 26px;
+        box-shadow: 1px 10px 10px -5px rgba(0, 0, 0, 0.4);
+        background-image: url("");
+        background-repeat: no-repeat;
+        background-size: 370px 490px;
+        background-position: center;
+    }
+
+    .verticals_verticals2{
+        width: 13vw;
+        height: 50vh;
+        text-align: center;
+        margin-top: 10px;
+        border-radius: 26px;
+        box-shadow: 1px 10px 10px -5px rgba(0, 0, 0, 0.4);
+        background-image: url("");
+        background-repeat: no-repeat;
+        background-size: 370px 490px;
+        background-position: center;
     }
 }
 
@@ -902,6 +1007,12 @@ border-radius: 50%;
     }
     .logo_vtb{
         display: none;
+    }
+
+    .right_col, .left_col, 
+    .baner_glav, .mobile{
+        display: flex;
+        flex-direction: column;
     }
 
     .logo_spec{
@@ -947,6 +1058,8 @@ border-radius: 50%;
 
     .podval_mob{
         display: flex;
+        justify-content: center;
+        align-items: center;
         height: 8vh;
         background: var(--color-bar);
     }
@@ -961,6 +1074,7 @@ border-radius: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     .contact{
